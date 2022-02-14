@@ -1,0 +1,7 @@
+tmp_dir = "tmp"
+
+[build]
+bin = "tmp/main"
+cmd = "go build -o ./tmp/main ."
+delay = 100
+exclude_dir = ["scripts", "migrations", "data", ".git", "transactions"]
