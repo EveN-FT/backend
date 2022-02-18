@@ -49,7 +49,15 @@ func main() {
 		redeemGroup := v1.Group("/redeem")
 		{
 			redeem := new(controllers.RedeemController)
-			redeemGroup.POST("/redeem/redeem", redeem.Redeem)
+			redeemGroup.POST("/redeem", redeem.Redeem)
+		}
+
+		eventGroup := v1.Group("/event")
+		{
+			event := new(controllers.EventController)
+			eventGroup.POST("/create", event.Create)
+			eventGroup.POST("/list", event.ListEvents)
+			eventGroup.POST("/list-by-owner", event.ListEventsByOwner)
 		}
 	}
 

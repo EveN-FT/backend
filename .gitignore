@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+tmp/
+data/
+config.json*
+.env
