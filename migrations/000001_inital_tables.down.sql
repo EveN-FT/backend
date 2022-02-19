@@ -1,1 +1,2 @@
+DROP TABLE IF EXISTS "redeems";
 DROP TABLE IF EXISTS "events";

@@ -24,7 +24,6 @@ func (ctrl EventController) Create(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Error creating event",
 		})
-		return
 	}
 
 	err := c.ShouldBindJSON(&params)
@@ -55,7 +54,6 @@ func (ctrl EventController) ListEvents(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Error creating event",
 		})
-		return
 	}
 
 	// list events
@@ -81,7 +79,6 @@ func (ctrl EventController) ListEventsByOwner(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": "Error creating event",
 		})
-		return
 	}
 
 	err := c.ShouldBindJSON(&params)

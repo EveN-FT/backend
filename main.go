@@ -46,10 +46,12 @@ func main() {
 
 	v1 := r.Group("/api/v1")
 	{
-		redeemGroup := v1.Group("/redeem")
+		ticketGroup := v1.Group("/ticket")
 		{
-			redeem := new(controllers.RedeemController)
-			redeemGroup.POST("/redeem", redeem.Redeem)
+			ticket := new(controllers.TicketController)
+			ticketGroup.POST("/redeem", ticket.Redeem)
+			ticketGroup.POST("/transfer", ticket.Transfer)
+			ticketGroup.POST("/create", ticket.CreateRedeem)
 		}
 
 		eventGroup := v1.Group("/event")

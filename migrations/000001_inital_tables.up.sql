@@ -3,3 +3,9 @@ CREATE TABLE IF NOT EXISTS events (
     address TEXT NOT NULL UNIQUE,
     owner_address TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS redeems (
+    id INTEGER PRIMARY KEY,
+    owner_address TEXT NOT NULL,
+    redeemed BOOLEAN DEFAULT FALSE
+);
