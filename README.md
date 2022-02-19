@@ -1,4 +1,4 @@
-# moments
+# Event Tickets
 
 This is the backend for *even-ft*.
 
